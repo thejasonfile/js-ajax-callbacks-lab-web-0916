@@ -8,6 +8,7 @@ $(document).ready(function (){
 });
 
 function searchRepositories(){
+  $("#results, #details, #errors").empty()
   var search = $('#searchTerms').val();
   $.ajax({
     method: "GET",
@@ -22,7 +23,6 @@ function searchRepositories(){
 }
 
 function showCommits(repo_link){
-  $("#details").empty()
   var search = $('#searchTerms').val();
   var owner = repo_link.dataset.owner;
   var repository = repo_link.dataset.repository;
