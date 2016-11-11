@@ -37,6 +37,7 @@
     </div>
     <script src="jquery-3.1.0.min.js"></script>
     <script src="handlebars.js"></script>
+    <script src="adapters\showCommitsAdapter.js"></script>
     <script src="index.js"></script>
     <script id="user-details-partial" type="text/x-handlebars-template">
     </script>
@@ -46,7 +47,7 @@
           <li>
           <h2><a href="{{html_url}}">{{name}}</a></h2>
           <p>Description: {{description}}</p>
-          <a href="#" data-repository={{name}} data-owner={{owner.login}} - onclick="showCommits(this)">Show Commits</a>
+          <a href="#" data-repository={{name}} data-owner={{owner.login}} - onclick="showCommitsAdapter(this)">Show Commits</a>
           </li>
         {{/each}}
       </ul>
