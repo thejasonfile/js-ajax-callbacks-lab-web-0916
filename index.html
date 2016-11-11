@@ -24,7 +24,7 @@
     </main>
     <label for="searchTerms">Search Term</label>
       <input type="text" name="searchTerms" id="searchTerms" />
-      <a href="#" onclick="searchRepositories()">Search Repositories</a>
+      <a href="#" onclick="searchRepositories()"><button>Search Repositories</button></a>
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
@@ -55,9 +55,9 @@
       <ul>
         {{#each this}}
           <li>
-          <p>Sha: {{sha}}</p>
+          <p>SHA: {{sha}}</p>
           <p>Name: {{commit.author.name}}</p>
-          <p>Login: {{committer.login}}</p>
+          <p>Login: <a href="{{author.html_url}}">{{committer.login}}</a></p>
           <p><img src="{{committer.avatar_url}}" height="64" width="64"></p>
         {{/each}}
       </ul>
