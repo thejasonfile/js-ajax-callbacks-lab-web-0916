@@ -7,9 +7,6 @@ function showCommitsAdapter(repo_link){
     url: `https://api.github.com/repos/${owner}/${repository}/commits`,
     error: displayError
   }).done(function(data){
-    var src = $("#commit-template")[0].innerHTML
-    var template = Handlebars.compile(src)
-    var commitList = template(data)
-    $("#details").append(commitList)
+    commitsController(data);
   })
 }
